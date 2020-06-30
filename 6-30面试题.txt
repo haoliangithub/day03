@@ -1,0 +1,28 @@
+1String 类中常用的方法
+ split 把字符串分割成字符串数组
+ indexOf 从指定字符提取索引位置
+ append 追加字符或字符串
+ trim  去除字符串两端空格
+ replace  替换
+ hashcode 返回此字符串的哈希码
+ substring 截取字符串
+ equals 比较
+ length 获取字符串 长度
+ value Of 转换字符串
+ concat 将指定字符串连接到此字符串的结尾
+ compareTo 用来比较两个字符串的字典位置 
+ compareToIgnoreCase 不考虑大写小写 按字典顺序比较两个字符串
+ contains 检查一个字符传中是否包含想要查找的值
+
+2什么是重载和重写
+方法重载是一个类中定义了多个方法名相同而他们的参数的数量不同 或者 数量相同而类型和次序不同 则称之为方法的重载
+方法的重写实在子类存在与父类方法名相同 而且参数个数和类型一样 返回值也一样的方法 就称为重写‘
+
+3hashmap和hashtable 的区别
+ 这两个都是map接口下的实现类 我们开发的时候经常用的hashmao 虽然hashmap线程不安全 但是他的效率比较该 
+hashtable 时线程安全我们看到他底层的put方法前面加的时synchronized关键字 但是他们呢的i笑傲率太低 我们开发很少用  为什么说hashtable时线程安全的 因为看源码的时候put方法前面加了synchronized关键字 什么抢矿 下用hashmap 
+我们有时候在自定义放回json字符串的时候封装到list中进行返回
+
+
+4hashmap的底层原理
+ hashmap底层是通过 数组和链表联合实现的 当我们创建 hashmap时回显创建一个数组 当我们用put方法存数据时先垦局keyde hashcode值计算出hash值 然后用这个哈希值确定在数组中的位置 再把value值放进去 如果这个位置比呢来没放东西 就会直接放进去 如果之前就有 就会生成一个链表 把新放入的值放在同步 当用get方法取值时 回显根据key的hashcode值计算出hash值 确定位置 再根据equals法从该位置的链表取出value值
